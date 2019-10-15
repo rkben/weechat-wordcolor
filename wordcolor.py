@@ -9,6 +9,7 @@ SCRIPT_VERSION = "0.1"
 SCRIPT_LICENSE = "0BSD"
 SCRIPT_DESC = "Automagically visualize keywords with associated colors. "\
     "https://en.wikipedia.org/wiki/Color_psychology#General_model"
+
 MODE="INPUT"
 
 COLOR = {"white": "00", "black": "01", "blue": "02",
@@ -29,6 +30,7 @@ else:
 def gross():
     # wonder if this closes, probably
     if REE == 2:
+        # this is probably wherever you started weechat
         return CONF.readfp(open("words.cfg"))
     else:
         return CONF.read_file(open("words.cfg"))
